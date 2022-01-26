@@ -2,7 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const storage = multer.diskStorage({
 	destination: function(req, file, cb) {
-		cb(null, __dirname +'/uploads/images')
+		cb(null, __dirname +'/storage')
 	},
 	filename: function (req, file, cb) {
 		const filename_d = file.originalname.split(".");
